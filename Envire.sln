@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eMAG", "eMAG\eMAG.csproj", "{E4A7ED94-1C54-4FD2-934E-9FB7EC8C16B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Envire", "eMAG\Envire.csproj", "{E4A7ED94-1C54-4FD2-934E-9FB7EC8C16B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

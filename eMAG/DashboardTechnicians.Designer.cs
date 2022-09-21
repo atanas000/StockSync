@@ -30,18 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardTechnicians));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.totalSales = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.customersNum = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.numOrders = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -86,7 +91,10 @@
             this.DMS = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
             this.darkThemeSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
@@ -95,6 +103,7 @@
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -114,6 +123,8 @@
             this.materialTabControl1.Controls.Add(this.DMS);
             this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Controls.Add(this.tabPage3);
+            this.materialTabControl1.Controls.Add(this.tabPage7);
+            this.materialTabControl1.Controls.Add(this.tabPage8);
             this.materialTabControl1.Controls.Add(this.tabPage6);
             this.materialTabControl1.Controls.Add(this.userLoged);
             this.materialTabControl1.Depth = 0;
@@ -130,6 +141,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.materialLabel5);
+            this.tabPage1.Controls.Add(this.materialCard3);
             this.tabPage1.Controls.Add(this.materialCard2);
             this.tabPage1.Controls.Add(this.materialCard1);
             this.tabPage1.ImageKey = "combo_chart_32px.png";
@@ -141,6 +154,93 @@
             this.tabPage1.Text = "Начало";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // materialLabel5
+            // 
+            this.materialLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.materialLabel5.ForeColor = System.Drawing.Color.Black;
+            this.materialLabel5.Location = new System.Drawing.Point(16, 15);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(418, 60);
+            this.materialLabel5.TabIndex = 4;
+            this.materialLabel5.Text = "Technician`s Dashboard";
+            this.materialLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.totalSales);
+            this.materialCard3.Controls.Add(this.materialLabel7);
+            this.materialCard3.Controls.Add(this.materialFloatingActionButton3);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(586, 97);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(248, 93);
+            this.materialCard3.TabIndex = 3;
+            // 
+            // totalSales
+            // 
+            this.totalSales.Depth = 0;
+            this.totalSales.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.totalSales.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.totalSales.Location = new System.Drawing.Point(19, 42);
+            this.totalSales.MouseState = MaterialSkin.MouseState.HOVER;
+            this.totalSales.Name = "totalSales";
+            this.totalSales.Size = new System.Drawing.Size(127, 40);
+            this.totalSales.TabIndex = 2;
+            this.totalSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.Location = new System.Drawing.Point(17, 14);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(91, 19);
+            this.materialLabel7.TabIndex = 1;
+            this.materialLabel7.Text = "Общ оборот";
+            // 
+            // materialFloatingActionButton3
+            // 
+            this.materialFloatingActionButton3.Depth = 0;
+            this.materialFloatingActionButton3.Icon = global::Envire.Properties.Resources.total_sales_32px;
+            this.materialFloatingActionButton3.ImageKey = "shopping_basket_32px.png";
+            this.materialFloatingActionButton3.ImageList = this.imageList1;
+            this.materialFloatingActionButton3.Location = new System.Drawing.Point(175, 18);
+            this.materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton3.Name = "materialFloatingActionButton3";
+            this.materialFloatingActionButton3.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton3.TabIndex = 0;
+            this.materialFloatingActionButton3.Text = "materialFloatingActionButton3";
+            this.materialFloatingActionButton3.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "return_merchandise_authorization_32px.png");
+            this.imageList1.Images.SetKeyName(1, "data_transfer_32px.png");
+            this.imageList1.Images.SetKeyName(2, "shipped_32px.png");
+            this.imageList1.Images.SetKeyName(3, "warehouse_32px.png");
+            this.imageList1.Images.SetKeyName(4, "settings_32px.png");
+            this.imageList1.Images.SetKeyName(5, "search_32px.png");
+            this.imageList1.Images.SetKeyName(6, "combo_chart_32px.png");
+            this.imageList1.Images.SetKeyName(7, "logout_32px.png");
+            this.imageList1.Images.SetKeyName(8, "shopping_basket_32px.png");
+            this.imageList1.Images.SetKeyName(9, "customer_32px.png");
+            this.imageList1.Images.SetKeyName(10, "cheque_32px.png");
+            this.imageList1.Images.SetKeyName(11, "accounting_32px.png");
+            // 
             // materialCard2
             // 
             this.materialCard2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -150,7 +250,7 @@
             this.materialCard2.Controls.Add(this.materialFloatingActionButton2);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(310, 34);
+            this.materialCard2.Location = new System.Drawing.Point(310, 97);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
@@ -185,7 +285,7 @@
             // materialFloatingActionButton2
             // 
             this.materialFloatingActionButton2.Depth = 0;
-            this.materialFloatingActionButton2.Icon = global::eMAG.Properties.Resources.customer_32px;
+            this.materialFloatingActionButton2.Icon = global::Envire.Properties.Resources.customer_32px;
             this.materialFloatingActionButton2.ImageKey = "customer_32px.png";
             this.materialFloatingActionButton2.ImageList = this.imageList1;
             this.materialFloatingActionButton2.Location = new System.Drawing.Point(175, 18);
@@ -196,30 +296,16 @@
             this.materialFloatingActionButton2.Text = "materialFloatingActionButton2";
             this.materialFloatingActionButton2.UseVisualStyleBackColor = true;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "return_merchandise_authorization_32px.png");
-            this.imageList1.Images.SetKeyName(1, "data_transfer_32px.png");
-            this.imageList1.Images.SetKeyName(2, "shipped_32px.png");
-            this.imageList1.Images.SetKeyName(3, "warehouse_32px.png");
-            this.imageList1.Images.SetKeyName(4, "settings_32px.png");
-            this.imageList1.Images.SetKeyName(5, "search_32px.png");
-            this.imageList1.Images.SetKeyName(6, "combo_chart_32px.png");
-            this.imageList1.Images.SetKeyName(7, "logout_32px.png");
-            this.imageList1.Images.SetKeyName(8, "shopping_basket_32px.png");
-            this.imageList1.Images.SetKeyName(9, "customer_32px.png");
-            // 
             // materialCard1
             // 
+            this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.numOrders);
             this.materialCard1.Controls.Add(this.materialLabel4);
             this.materialCard1.Controls.Add(this.materialFloatingActionButton1);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(34, 34);
+            this.materialCard1.Location = new System.Drawing.Point(34, 97);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -254,7 +340,7 @@
             // materialFloatingActionButton1
             // 
             this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = global::eMAG.Properties.Resources.shopping_basket_32px;
+            this.materialFloatingActionButton1.Icon = global::Envire.Properties.Resources.shopping_basket_32px;
             this.materialFloatingActionButton1.ImageKey = "shopping_basket_32px.png";
             this.materialFloatingActionButton1.ImageList = this.imageList1;
             this.materialFloatingActionButton1.Location = new System.Drawing.Point(175, 18);
@@ -278,6 +364,7 @@
             // 
             // advancedSearchPanel
             // 
+            this.advancedSearchPanel.BackColor = System.Drawing.Color.White;
             this.advancedSearchPanel.Controls.Add(this.searchResult);
             this.advancedSearchPanel.Controls.Add(this.guna2DateTimePicker2);
             this.advancedSearchPanel.Controls.Add(this.guna2DateTimePicker1);
@@ -296,6 +383,7 @@
             // 
             // searchResult
             // 
+            this.searchResult.BackColor = System.Drawing.Color.White;
             this.searchResult.Controls.Add(this.cancelOrderPanel);
             this.searchResult.Controls.Add(this.changePayMethod);
             this.searchResult.Controls.Add(this.cancelOrder);
@@ -321,6 +409,7 @@
             // 
             // cancelOrderPanel
             // 
+            this.cancelOrderPanel.BackColor = System.Drawing.Color.White;
             this.cancelOrderPanel.Controls.Add(this.saveStatus);
             this.cancelOrderPanel.Controls.Add(this.closeBtn);
             this.cancelOrderPanel.Controls.Add(this.materialLabel3);
@@ -513,36 +602,36 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.guna2DataGridView1.ColumnHeadersHeight = 21;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle30;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(35, 209);
@@ -592,9 +681,9 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "retailPrice";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Format = "C2";
+            dataGridViewCellStyle28.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle28;
             this.Column3.HeaderText = "Цена за брой";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -602,9 +691,9 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "Expr1";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle29.Format = "C2";
+            dataGridViewCellStyle29.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle29;
             this.Column4.HeaderText = "Общо";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -980,8 +1069,30 @@
             this.tabPage3.Text = "TRN";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.ImageKey = "accounting_32px.png";
+            this.tabPage7.Location = new System.Drawing.Point(4, 39);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1430, 460);
+            this.tabPage7.TabIndex = 8;
+            this.tabPage7.Text = "Счетоводство";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.ImageKey = "cheque_32px.png";
+            this.tabPage8.Location = new System.Drawing.Point(4, 39);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1430, 460);
+            this.tabPage8.TabIndex = 9;
+            this.tabPage8.Text = "Касов отчет";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.Color.White;
+            this.tabPage6.Controls.Add(this.materialLabel8);
             this.tabPage6.Controls.Add(this.materialButton5);
             this.tabPage6.Controls.Add(this.darkThemeSwitch);
             this.tabPage6.Controls.Add(this.materialButton2);
@@ -991,7 +1102,19 @@
             this.tabPage6.Size = new System.Drawing.Size(1430, 460);
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "Настройки";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel8.Location = new System.Drawing.Point(58, 98);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(95, 19);
+            this.materialLabel8.TabIndex = 29;
+            this.materialLabel8.Text = "Светла тема";
+            this.materialLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialButton5
             // 
@@ -1017,7 +1140,7 @@
             // 
             this.darkThemeSwitch.AutoSize = true;
             this.darkThemeSwitch.Depth = 0;
-            this.darkThemeSwitch.Location = new System.Drawing.Point(23, 83);
+            this.darkThemeSwitch.Location = new System.Drawing.Point(157, 89);
             this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1117,10 +1240,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashboardTechnicians";
             this.Padding = new System.Windows.Forms.Padding(0, 88, 3, 3);
+            this.Text = "Envire by VivaSoft";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardTechnicians_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.materialCard3.ResumeLayout(false);
+            this.materialCard3.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
             this.materialCard1.ResumeLayout(false);
@@ -1198,5 +1324,13 @@
         private MaterialSkin.Controls.MaterialButton closeBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialTextBox orderNumberCancel;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private MaterialSkin.Controls.MaterialCard materialCard3;
+        private MaterialSkin.Controls.MaterialLabel totalSales;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel8;
     }
 }

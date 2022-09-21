@@ -121,22 +121,43 @@
   <data name="352270_close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352270_close_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="joanna-kosinska-1_CMoFsPfso-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\joanna-kosinska-1_CMoFsPfso-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping_basket_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping_basket_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot 2022-09-21 192224" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2022-09-21 192224.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cesar-couto-TIvFLeqZ4ec-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cesar-couto-TIvFLeqZ4ec-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo_Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo_Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warehouse_90px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse_90px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="352021_arrow_drop down_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352021_arrow_drop down_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="joanna-kosinska-1_CMoFsPfso-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joanna-kosinska-1_CMoFsPfso-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="total_sales_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total_sales_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warehouse_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shopping_basket_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping_basket_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="customer_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_4x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_4x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_4x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_4x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2022-09-21 192224BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2022-09-21 192224BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

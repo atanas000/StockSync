@@ -8,8 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E4A7ED94-1C54-4FD2-934E-9FB7EC8C16B3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>eMAG</RootNamespace>
-    <AssemblyName>eMAG</AssemblyName>
+    <RootNamespace>Envire</RootNamespace>
+    <AssemblyName>Envire</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Logo_Color.ico</ApplicationIcon>
+    <ApplicationIcon>Screenshot 2022-09-21 192224BG.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -334,8 +334,16 @@
     <None Include="Resources\352270_close_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="login.txt" />
+    <Content Include="logo_4x %281%29.ico" />
     <Content Include="Logo_Color.ico" />
+    <None Include="Resources\Screenshot 2022-09-21 192224.png" />
+    <None Include="Resources\Screenshot 2022-09-21 192224BG.png" />
+    <Content Include="Screenshot 2022-09-21 192224BG.ico" />
+    <None Include="Resources\total_sales_32px.png" />
+    <None Include="Resources\logo_4x1.png" />
+    <None Include="Resources\warehouse_90px1.png" />
+    <None Include="Resources\warehouse_90px.png" />
+    <None Include="Resources\logo_4x.png" />
     <None Include="Resources\customer_32px.png" />
     <None Include="Resources\shopping_basket_32px.png" />
   </ItemGroup>

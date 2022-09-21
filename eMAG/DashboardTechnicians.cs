@@ -28,21 +28,33 @@ namespace eMAG
             materialSkinManager.ColorScheme = FillSettingsFile.UIColorScheme;
         }
 
+        MaterialSkinManager TManager = MaterialSkinManager.Instance;
+
+
         private void DashboardTechnicians_Load(object sender, EventArgs e)
         {
-            this.Text = "eMAG International" + " | " + LogData.Position;
-            
+            guna2DataGridView1.AutoGenerateColumns = false;
+
+            using (StreamReader sr = new StreamReader("theme.txt"))
+            {
+                FillSettingsFile.UIThemeStr = sr.ReadLine();
+            }
             if (FillSettingsFile.UIThemeStr == "Dark")
             {
                 darkThemeSwitch.Checked = true;
             }
-            else if(FillSettingsFile.UIThemeStr == "Light")
+            else
             {
                 darkThemeSwitch.Checked = false;
             }
-            //userLoged.Text = LogData.FirstName + " " + LogData.LastName;
 
-            guna2DataGridView1.AutoGenerateColumns = false;
+            using (StreamWriter sw = new StreamWriter("data.txt", false))
+            {
+                sw.WriteLine(FillSettingsFile.server);
+                sw.WriteLine(FillSettingsFile.db);
+                sw.WriteLine(FillSettingsFile.username);
+                sw.WriteLine(FillSettingsFile.password);
+            }
 
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
@@ -68,8 +80,6 @@ namespace eMAG
                 }
             }
 
-
-
         }
 
         private void userLoged_Click(object sender, EventArgs e)
@@ -92,11 +102,12 @@ namespace eMAG
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM customers INNER JOIN order_detail ON customers.id=order_detail.OrderID INNER JOIN orders ON order_detail.OrderID=orders.id WHERE customers.phone=@phone OR customers.email=@email OR order_detail.OrderID=@orderID", conn);
+                MySqlCommand cmd = new MySqlCommand("SELECT customers.address, customers.city, customers.country, customers.firstName, customers.lastName, customers.middleName, customers.phone, orders.OrderNumber, orders.OrderDate, orders.ShipmentDate, orders.OrderStatus, products.title, products.retailPrice, order_detail.Quantity, order_detail.Quantity*products.retailPrice AS Expr1 FROM products INNER JOIN((customers INNER JOIN orders ON customers.id = orders.CustomerID) INNER JOIN order_detail ON orders.id = order_detail.OrderID) ON products.id = order_detail.ProductID WHERE customers.phone=@phone OR customers.email=@email OR order_detail.OrderID=@orderID AND((orders.OrderDate)Between @date1 And @date2)", conn);
                 cmd.Parameters.AddWithValue("@phone", phoneBox.Text);
                 cmd.Parameters.AddWithValue("@email", emailBox.Text);
                 cmd.Parameters.AddWithValue("@orderID", orderIDBox.Text);
-
+                cmd.Parameters.AddWithValue("@date1", guna2DateTimePicker1.Value.Date);
+                cmd.Parameters.AddWithValue("@date2", guna2DateTimePicker2.Value.Date);
                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
@@ -131,43 +142,7 @@ namespace eMAG
                 da.Fill(dt);
                 guna2DataGridView1.DataSource = dt;
             }
-        }
 
-        private void darkThemeSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            if (darkThemeSwitch.Checked == true)
-            {
-                using (StreamWriter sw = new StreamWriter("data.txt", false))
-                {
-                    sw.WriteLine(FillSettingsFile.server);
-                    sw.WriteLine(FillSettingsFile.db);
-                    sw.WriteLine(FillSettingsFile.username);
-                    sw.WriteLine(FillSettingsFile.password);
-                    sw.WriteLine("Dark");
-                }
-                DialogResult dr = MessageBox.Show("За да запазите промените, трябва да рестартирате приложението. Рестартирай сега?", "Прилагане на промени", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    Application.Restart();
-                }
-            }
-            else if (darkThemeSwitch.Checked == false)
-            {
-                using (StreamWriter sw = new StreamWriter("data.txt", false))
-                {
-                    sw.WriteLine(FillSettingsFile.server);
-                    sw.WriteLine(FillSettingsFile.db);
-                    sw.WriteLine(FillSettingsFile.username);
-                    sw.WriteLine(FillSettingsFile.password);
-                    sw.WriteLine("Light");
-                }
-                DialogResult dr = MessageBox.Show("За да запазите промените, трябва да рестартирате приложението. Рестартирай сега?", "Прилагане на промени", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    Application.Restart();
-                }
-            }
-            
         }
 
         private void materialButton2_Click(object sender, EventArgs e)
@@ -239,6 +214,26 @@ namespace eMAG
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Поръчката е отменена успешно!", "Отменена поръчка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cancelOrderPanel.Visible = false;
+            }
+        }
+
+        private void darkThemeSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (darkThemeSwitch.Checked)
+            {
+                TManager.Theme = MaterialSkinManager.Themes.DARK;
+                using (StreamWriter sw = new StreamWriter("theme.txt", false))
+                {
+                    sw.WriteLine("Dark");
+                }
+            }
+            else
+            {
+                TManager.Theme = MaterialSkinManager.Themes.LIGHT;
+                using (StreamWriter sw = new StreamWriter("theme.txt", false))
+                {
+                    sw.WriteLine("Light");
+                }
             }
         }
     }
