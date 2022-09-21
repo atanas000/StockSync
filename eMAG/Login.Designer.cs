@@ -29,26 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.passBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.signinBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.passForgot = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::eMAG.Properties.Resources.Logo_Color;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // userBox
             // 
@@ -61,7 +49,7 @@
             this.userBox.Depth = 0;
             this.userBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.userBox.HideSelection = true;
-            this.userBox.Hint = "Username";
+            this.userBox.Hint = "Потребителско име";
             this.userBox.LeadingIcon = null;
             this.userBox.Location = new System.Drawing.Point(66, 303);
             this.userBox.MaxLength = 32767;
@@ -94,7 +82,7 @@
             this.passBox.Depth = 0;
             this.passBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.passBox.HideSelection = true;
-            this.passBox.Hint = "Password";
+            this.passBox.Hint = "Парола";
             this.passBox.LeadingIcon = null;
             this.passBox.Location = new System.Drawing.Point(66, 357);
             this.passBox.MaxLength = 32767;
@@ -132,7 +120,7 @@
             this.signinBtn.NoAccentTextColor = System.Drawing.Color.Empty;
             this.signinBtn.Size = new System.Drawing.Size(109, 36);
             this.signinBtn.TabIndex = 18;
-            this.signinBtn.Text = "Sign in";
+            this.signinBtn.Text = "Вход";
             this.signinBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.signinBtn.UseAccentColor = false;
             this.signinBtn.UseVisualStyleBackColor = true;
@@ -154,7 +142,7 @@
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButton1.Size = new System.Drawing.Size(109, 36);
             this.materialButton1.TabIndex = 19;
-            this.materialButton1.Text = "Reset";
+            this.materialButton1.Text = "Изчистване";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
@@ -177,10 +165,22 @@
             this.passForgot.NoAccentTextColor = System.Drawing.Color.Empty;
             this.passForgot.Size = new System.Drawing.Size(167, 36);
             this.passForgot.TabIndex = 20;
-            this.passForgot.Text = "Forgot password?";
+            this.passForgot.Text = "Забравена парола";
             this.passForgot.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.passForgot.UseAccentColor = false;
             this.passForgot.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::eMAG.Properties.Resources.Logo_Color;
+            this.pictureBox1.Location = new System.Drawing.Point(103, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 

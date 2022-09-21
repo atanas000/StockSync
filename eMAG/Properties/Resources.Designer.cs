@@ -93,6 +93,16 @@ namespace eMAG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_32px {
+            get {
+                object obj = ResourceManager.GetObject("customer_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap joanna_kosinska_1_CMoFsPfso_unsplash {
             get {
                 object obj = ResourceManager.GetObject("joanna-kosinska-1_CMoFsPfso-unsplash", resourceCulture);
@@ -106,6 +116,16 @@ namespace eMAG.Properties {
         internal static System.Drawing.Bitmap Logo_Color {
             get {
                 object obj = ResourceManager.GetObject("Logo_Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_basket_32px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_basket_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,23 +30,55 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardTechnicians));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.customersNum = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.numOrders = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.advancedSearchPanel = new System.Windows.Forms.Panel();
             this.searchResult = new System.Windows.Forms.Panel();
+            this.cancelOrderPanel = new System.Windows.Forms.Panel();
+            this.saveStatus = new MaterialSkin.Controls.MaterialButton();
+            this.closeBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.orderNumberCancel = new MaterialSkin.Controls.MaterialTextBox();
+            this.changePayMethod = new MaterialSkin.Controls.MaterialButton();
+            this.cancelOrder = new MaterialSkin.Controls.MaterialButton();
+            this.standardGuarantee = new MaterialSkin.Controls.MaterialButton();
+            this.createRMA = new MaterialSkin.Controls.MaterialButton();
+            this.ShipmentDate = new MaterialSkin.Controls.MaterialTextBox();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderStatus = new MaterialSkin.Controls.MaterialTextBox();
+            this.OrderDate = new MaterialSkin.Controls.MaterialTextBox();
+            this.orderNumber = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.countryClient = new MaterialSkin.Controls.MaterialTextBox();
             this.cityClient = new MaterialSkin.Controls.MaterialTextBox();
             this.addressClient = new MaterialSkin.Controls.MaterialTextBox();
             this.phoneClient = new MaterialSkin.Controls.MaterialTextBox();
             this.nameClient = new MaterialSkin.Controls.MaterialTextBox();
+            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.resetBtn = new MaterialSkin.Controls.MaterialButton();
             this.searchBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.emailBox = new MaterialSkin.Controls.MaterialTextBox();
             this.orderIDBox = new MaterialSkin.Controls.MaterialTextBox();
             this.phoneBox = new MaterialSkin.Controls.MaterialTextBox();
@@ -55,12 +87,23 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.darkThemeSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.userLoged = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            this.materialCard1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.advancedSearchPanel.SuspendLayout();
             this.searchResult.SuspendLayout();
+            this.cancelOrderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            this.userLoged.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -82,19 +125,145 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1233, 503);
+            this.materialTabControl1.Size = new System.Drawing.Size(1438, 503);
             this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.materialCard2);
+            this.tabPage1.Controls.Add(this.materialCard1);
             this.tabPage1.ImageKey = "combo_chart_32px.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage1.Size = new System.Drawing.Size(1430, 460);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Начало";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.customersNum);
+            this.materialCard2.Controls.Add(this.materialLabel6);
+            this.materialCard2.Controls.Add(this.materialFloatingActionButton2);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(310, 34);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(248, 93);
+            this.materialCard2.TabIndex = 3;
+            // 
+            // customersNum
+            // 
+            this.customersNum.Depth = 0;
+            this.customersNum.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.customersNum.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.customersNum.Location = new System.Drawing.Point(19, 42);
+            this.customersNum.MouseState = MaterialSkin.MouseState.HOVER;
+            this.customersNum.Name = "customersNum";
+            this.customersNum.Size = new System.Drawing.Size(127, 40);
+            this.customersNum.TabIndex = 2;
+            this.customersNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(17, 14);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(103, 19);
+            this.materialLabel6.TabIndex = 1;
+            this.materialLabel6.Text = "Брой клиенти";
+            // 
+            // materialFloatingActionButton2
+            // 
+            this.materialFloatingActionButton2.Depth = 0;
+            this.materialFloatingActionButton2.Icon = global::eMAG.Properties.Resources.customer_32px;
+            this.materialFloatingActionButton2.ImageKey = "customer_32px.png";
+            this.materialFloatingActionButton2.ImageList = this.imageList1;
+            this.materialFloatingActionButton2.Location = new System.Drawing.Point(175, 18);
+            this.materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton2.Name = "materialFloatingActionButton2";
+            this.materialFloatingActionButton2.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton2.TabIndex = 0;
+            this.materialFloatingActionButton2.Text = "materialFloatingActionButton2";
+            this.materialFloatingActionButton2.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "return_merchandise_authorization_32px.png");
+            this.imageList1.Images.SetKeyName(1, "data_transfer_32px.png");
+            this.imageList1.Images.SetKeyName(2, "shipped_32px.png");
+            this.imageList1.Images.SetKeyName(3, "warehouse_32px.png");
+            this.imageList1.Images.SetKeyName(4, "settings_32px.png");
+            this.imageList1.Images.SetKeyName(5, "search_32px.png");
+            this.imageList1.Images.SetKeyName(6, "combo_chart_32px.png");
+            this.imageList1.Images.SetKeyName(7, "logout_32px.png");
+            this.imageList1.Images.SetKeyName(8, "shopping_basket_32px.png");
+            this.imageList1.Images.SetKeyName(9, "customer_32px.png");
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.numOrders);
+            this.materialCard1.Controls.Add(this.materialLabel4);
+            this.materialCard1.Controls.Add(this.materialFloatingActionButton1);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(34, 34);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(248, 93);
+            this.materialCard1.TabIndex = 1;
+            // 
+            // numOrders
+            // 
+            this.numOrders.Depth = 0;
+            this.numOrders.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.numOrders.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.numOrders.Location = new System.Drawing.Point(19, 42);
+            this.numOrders.MouseState = MaterialSkin.MouseState.HOVER;
+            this.numOrders.Name = "numOrders";
+            this.numOrders.Size = new System.Drawing.Size(127, 40);
+            this.numOrders.TabIndex = 2;
+            this.numOrders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(17, 14);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(106, 19);
+            this.materialLabel4.TabIndex = 1;
+            this.materialLabel4.Text = "Брой поръчки";
+            // 
+            // materialFloatingActionButton1
+            // 
+            this.materialFloatingActionButton1.Depth = 0;
+            this.materialFloatingActionButton1.Icon = global::eMAG.Properties.Resources.shopping_basket_32px;
+            this.materialFloatingActionButton1.ImageKey = "shopping_basket_32px.png";
+            this.materialFloatingActionButton1.ImageList = this.imageList1;
+            this.materialFloatingActionButton1.Location = new System.Drawing.Point(175, 18);
+            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton1.TabIndex = 0;
+            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
@@ -102,7 +271,7 @@
             this.tabPage5.ImageKey = "search_32px.png";
             this.tabPage5.Location = new System.Drawing.Point(4, 39);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage5.Size = new System.Drawing.Size(1430, 460);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Подробно търсене";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -110,23 +279,33 @@
             // advancedSearchPanel
             // 
             this.advancedSearchPanel.Controls.Add(this.searchResult);
+            this.advancedSearchPanel.Controls.Add(this.guna2DateTimePicker2);
+            this.advancedSearchPanel.Controls.Add(this.guna2DateTimePicker1);
             this.advancedSearchPanel.Controls.Add(this.resetBtn);
             this.advancedSearchPanel.Controls.Add(this.searchBtn);
             this.advancedSearchPanel.Controls.Add(this.materialLabel2);
             this.advancedSearchPanel.Controls.Add(this.materialLabel1);
-            this.advancedSearchPanel.Controls.Add(this.dateTimePicker2);
-            this.advancedSearchPanel.Controls.Add(this.dateTimePicker1);
             this.advancedSearchPanel.Controls.Add(this.emailBox);
             this.advancedSearchPanel.Controls.Add(this.orderIDBox);
             this.advancedSearchPanel.Controls.Add(this.phoneBox);
             this.advancedSearchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedSearchPanel.Location = new System.Drawing.Point(0, 0);
             this.advancedSearchPanel.Name = "advancedSearchPanel";
-            this.advancedSearchPanel.Size = new System.Drawing.Size(1225, 460);
+            this.advancedSearchPanel.Size = new System.Drawing.Size(1430, 460);
             this.advancedSearchPanel.TabIndex = 0;
             // 
             // searchResult
             // 
+            this.searchResult.Controls.Add(this.cancelOrderPanel);
+            this.searchResult.Controls.Add(this.changePayMethod);
+            this.searchResult.Controls.Add(this.cancelOrder);
+            this.searchResult.Controls.Add(this.standardGuarantee);
+            this.searchResult.Controls.Add(this.createRMA);
+            this.searchResult.Controls.Add(this.ShipmentDate);
+            this.searchResult.Controls.Add(this.guna2DataGridView1);
+            this.searchResult.Controls.Add(this.OrderStatus);
+            this.searchResult.Controls.Add(this.OrderDate);
+            this.searchResult.Controls.Add(this.orderNumber);
             this.searchResult.Controls.Add(this.materialButton1);
             this.searchResult.Controls.Add(this.countryClient);
             this.searchResult.Controls.Add(this.cityClient);
@@ -136,9 +315,356 @@
             this.searchResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchResult.Location = new System.Drawing.Point(0, 0);
             this.searchResult.Name = "searchResult";
-            this.searchResult.Size = new System.Drawing.Size(1225, 460);
-            this.searchResult.TabIndex = 34;
+            this.searchResult.Size = new System.Drawing.Size(1430, 460);
+            this.searchResult.TabIndex = 38;
             this.searchResult.Visible = false;
+            // 
+            // cancelOrderPanel
+            // 
+            this.cancelOrderPanel.Controls.Add(this.saveStatus);
+            this.cancelOrderPanel.Controls.Add(this.closeBtn);
+            this.cancelOrderPanel.Controls.Add(this.materialLabel3);
+            this.cancelOrderPanel.Controls.Add(this.orderNumberCancel);
+            this.cancelOrderPanel.Location = new System.Drawing.Point(406, 20);
+            this.cancelOrderPanel.Name = "cancelOrderPanel";
+            this.cancelOrderPanel.Size = new System.Drawing.Size(619, 262);
+            this.cancelOrderPanel.TabIndex = 36;
+            this.cancelOrderPanel.Visible = false;
+            // 
+            // saveStatus
+            // 
+            this.saveStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveStatus.AutoSize = false;
+            this.saveStatus.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveStatus.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveStatus.Depth = 0;
+            this.saveStatus.HighEmphasis = true;
+            this.saveStatus.Icon = null;
+            this.saveStatus.Location = new System.Drawing.Point(476, 205);
+            this.saveStatus.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveStatus.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveStatus.Name = "saveStatus";
+            this.saveStatus.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveStatus.Size = new System.Drawing.Size(114, 36);
+            this.saveStatus.TabIndex = 45;
+            this.saveStatus.Text = "Запиши";
+            this.saveStatus.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveStatus.UseAccentColor = false;
+            this.saveStatus.UseVisualStyleBackColor = true;
+            this.saveStatus.Click += new System.EventHandler(this.saveStatus_Click);
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeBtn.AutoSize = false;
+            this.closeBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.closeBtn.Depth = 0;
+            this.closeBtn.HighEmphasis = true;
+            this.closeBtn.Icon = null;
+            this.closeBtn.Location = new System.Drawing.Point(352, 205);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.closeBtn.Size = new System.Drawing.Size(114, 36);
+            this.closeBtn.TabIndex = 42;
+            this.closeBtn.Text = "Затвори";
+            this.closeBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.closeBtn.UseAccentColor = false;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(31, 36);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(420, 19);
+            this.materialLabel3.TabIndex = 44;
+            this.materialLabel3.Text = "Сигурни ли сте, че искате да откажете поръчка с номер";
+            // 
+            // orderNumberCancel
+            // 
+            this.orderNumberCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.orderNumberCancel.AnimateReadOnly = false;
+            this.orderNumberCancel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderNumberCancel.Depth = 0;
+            this.orderNumberCancel.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.orderNumberCancel.Hint = "Номер на поръчка";
+            this.orderNumberCancel.LeadingIcon = null;
+            this.orderNumberCancel.Location = new System.Drawing.Point(31, 69);
+            this.orderNumberCancel.MaxLength = 50;
+            this.orderNumberCancel.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderNumberCancel.Multiline = false;
+            this.orderNumberCancel.Name = "orderNumberCancel";
+            this.orderNumberCancel.Size = new System.Drawing.Size(364, 50);
+            this.orderNumberCancel.TabIndex = 43;
+            this.orderNumberCancel.Text = "";
+            this.orderNumberCancel.TrailingIcon = null;
+            // 
+            // changePayMethod
+            // 
+            this.changePayMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changePayMethod.AutoSize = false;
+            this.changePayMethod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.changePayMethod.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.changePayMethod.Depth = 0;
+            this.changePayMethod.HighEmphasis = true;
+            this.changePayMethod.Icon = null;
+            this.changePayMethod.Location = new System.Drawing.Point(878, 157);
+            this.changePayMethod.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.changePayMethod.MouseState = MaterialSkin.MouseState.HOVER;
+            this.changePayMethod.Name = "changePayMethod";
+            this.changePayMethod.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.changePayMethod.Size = new System.Drawing.Size(239, 36);
+            this.changePayMethod.TabIndex = 35;
+            this.changePayMethod.Text = "Смяна на метод за плащане";
+            this.changePayMethod.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.changePayMethod.UseAccentColor = false;
+            this.changePayMethod.UseVisualStyleBackColor = true;
+            // 
+            // cancelOrder
+            // 
+            this.cancelOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelOrder.AutoSize = false;
+            this.cancelOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cancelOrder.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.cancelOrder.Depth = 0;
+            this.cancelOrder.HighEmphasis = true;
+            this.cancelOrder.Icon = null;
+            this.cancelOrder.Location = new System.Drawing.Point(682, 157);
+            this.cancelOrder.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cancelOrder.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cancelOrder.Name = "cancelOrder";
+            this.cancelOrder.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.cancelOrder.Size = new System.Drawing.Size(188, 36);
+            this.cancelOrder.TabIndex = 34;
+            this.cancelOrder.Text = "Отказване на поръчка";
+            this.cancelOrder.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.cancelOrder.UseAccentColor = false;
+            this.cancelOrder.UseVisualStyleBackColor = true;
+            this.cancelOrder.Click += new System.EventHandler(this.cancelOrder_Click);
+            // 
+            // standardGuarantee
+            // 
+            this.standardGuarantee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.standardGuarantee.AutoSize = false;
+            this.standardGuarantee.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.standardGuarantee.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.standardGuarantee.Depth = 0;
+            this.standardGuarantee.HighEmphasis = true;
+            this.standardGuarantee.Icon = null;
+            this.standardGuarantee.Location = new System.Drawing.Point(486, 157);
+            this.standardGuarantee.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.standardGuarantee.MouseState = MaterialSkin.MouseState.HOVER;
+            this.standardGuarantee.Name = "standardGuarantee";
+            this.standardGuarantee.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.standardGuarantee.Size = new System.Drawing.Size(188, 36);
+            this.standardGuarantee.TabIndex = 33;
+            this.standardGuarantee.Text = "Стандартна гаранция";
+            this.standardGuarantee.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.standardGuarantee.UseAccentColor = false;
+            this.standardGuarantee.UseVisualStyleBackColor = true;
+            // 
+            // createRMA
+            // 
+            this.createRMA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.createRMA.AutoSize = false;
+            this.createRMA.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.createRMA.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.createRMA.Depth = 0;
+            this.createRMA.HighEmphasis = true;
+            this.createRMA.Icon = null;
+            this.createRMA.Location = new System.Drawing.Point(313, 157);
+            this.createRMA.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.createRMA.MouseState = MaterialSkin.MouseState.HOVER;
+            this.createRMA.Name = "createRMA";
+            this.createRMA.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.createRMA.Size = new System.Drawing.Size(165, 36);
+            this.createRMA.TabIndex = 32;
+            this.createRMA.Text = "Създай RMA лист";
+            this.createRMA.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.createRMA.UseAccentColor = false;
+            this.createRMA.UseVisualStyleBackColor = true;
+            // 
+            // ShipmentDate
+            // 
+            this.ShipmentDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ShipmentDate.AnimateReadOnly = false;
+            this.ShipmentDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ShipmentDate.Depth = 0;
+            this.ShipmentDate.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ShipmentDate.Hint = "Дата на изпращане";
+            this.ShipmentDate.LeadingIcon = null;
+            this.ShipmentDate.Location = new System.Drawing.Point(718, 91);
+            this.ShipmentDate.MaxLength = 50;
+            this.ShipmentDate.MouseState = MaterialSkin.MouseState.OUT;
+            this.ShipmentDate.Multiline = false;
+            this.ShipmentDate.Name = "ShipmentDate";
+            this.ShipmentDate.Size = new System.Drawing.Size(248, 50);
+            this.ShipmentDate.TabIndex = 31;
+            this.ShipmentDate.Text = "";
+            this.ShipmentDate.TrailingIcon = null;
+            // 
+            // guna2DataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView1.ColumnHeadersHeight = 21;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(35, 209);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.ReadOnly = true;
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1362, 185);
+            this.guna2DataGridView1.TabIndex = 30;
+            this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 21;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "title";
+            this.Column1.HeaderText = "Продукти";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Quantity";
+            this.Column2.HeaderText = "Количество";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "retailPrice";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.HeaderText = "Цена за брой";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Expr1";
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.HeaderText = "Общо";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // OrderStatus
+            // 
+            this.OrderStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.OrderStatus.AnimateReadOnly = false;
+            this.OrderStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrderStatus.Depth = 0;
+            this.OrderStatus.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.OrderStatus.Hint = "Статус";
+            this.OrderStatus.LeadingIcon = null;
+            this.OrderStatus.Location = new System.Drawing.Point(972, 91);
+            this.OrderStatus.MaxLength = 50;
+            this.OrderStatus.MouseState = MaterialSkin.MouseState.OUT;
+            this.OrderStatus.Multiline = false;
+            this.OrderStatus.Name = "OrderStatus";
+            this.OrderStatus.Size = new System.Drawing.Size(248, 50);
+            this.OrderStatus.TabIndex = 29;
+            this.OrderStatus.Text = "";
+            this.OrderStatus.TrailingIcon = null;
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.OrderDate.AnimateReadOnly = false;
+            this.OrderDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrderDate.Depth = 0;
+            this.OrderDate.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.OrderDate.Hint = "Дата на поръчка";
+            this.OrderDate.LeadingIcon = null;
+            this.OrderDate.Location = new System.Drawing.Point(464, 91);
+            this.OrderDate.MaxLength = 50;
+            this.OrderDate.MouseState = MaterialSkin.MouseState.OUT;
+            this.OrderDate.Multiline = false;
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Size = new System.Drawing.Size(248, 50);
+            this.OrderDate.TabIndex = 28;
+            this.OrderDate.Text = "";
+            this.OrderDate.TrailingIcon = null;
+            // 
+            // orderNumber
+            // 
+            this.orderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.orderNumber.AnimateReadOnly = false;
+            this.orderNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderNumber.Depth = 0;
+            this.orderNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.orderNumber.Hint = "Номер на поръчка";
+            this.orderNumber.LeadingIcon = null;
+            this.orderNumber.Location = new System.Drawing.Point(210, 91);
+            this.orderNumber.MaxLength = 50;
+            this.orderNumber.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderNumber.Multiline = false;
+            this.orderNumber.Name = "orderNumber";
+            this.orderNumber.Size = new System.Drawing.Size(248, 50);
+            this.orderNumber.TabIndex = 27;
+            this.orderNumber.Text = "";
+            this.orderNumber.TrailingIcon = null;
             // 
             // materialButton1
             // 
@@ -149,7 +675,7 @@
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1093, 20);
+            this.materialButton1.Location = new System.Drawing.Point(1298, 20);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -164,13 +690,14 @@
             // 
             // countryClient
             // 
+            this.countryClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.countryClient.AnimateReadOnly = false;
             this.countryClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.countryClient.Depth = 0;
             this.countryClient.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.countryClient.Hint = "Държава";
             this.countryClient.LeadingIcon = null;
-            this.countryClient.Location = new System.Drawing.Point(27, 250);
+            this.countryClient.Location = new System.Drawing.Point(1043, 26);
             this.countryClient.MaxLength = 50;
             this.countryClient.MouseState = MaterialSkin.MouseState.OUT;
             this.countryClient.Multiline = false;
@@ -182,13 +709,14 @@
             // 
             // cityClient
             // 
+            this.cityClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cityClient.AnimateReadOnly = false;
             this.cityClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cityClient.Depth = 0;
             this.cityClient.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cityClient.Hint = "Град";
             this.cityClient.LeadingIcon = null;
-            this.cityClient.Location = new System.Drawing.Point(27, 194);
+            this.cityClient.Location = new System.Drawing.Point(789, 26);
             this.cityClient.MaxLength = 50;
             this.cityClient.MouseState = MaterialSkin.MouseState.OUT;
             this.cityClient.Multiline = false;
@@ -200,13 +728,14 @@
             // 
             // addressClient
             // 
+            this.addressClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.addressClient.AnimateReadOnly = false;
             this.addressClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressClient.Depth = 0;
             this.addressClient.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.addressClient.Hint = "Адрес";
             this.addressClient.LeadingIcon = null;
-            this.addressClient.Location = new System.Drawing.Point(27, 138);
+            this.addressClient.Location = new System.Drawing.Point(535, 26);
             this.addressClient.MaxLength = 50;
             this.addressClient.MouseState = MaterialSkin.MouseState.OUT;
             this.addressClient.Multiline = false;
@@ -218,13 +747,14 @@
             // 
             // phoneClient
             // 
+            this.phoneClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.phoneClient.AnimateReadOnly = false;
             this.phoneClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phoneClient.Depth = 0;
             this.phoneClient.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.phoneClient.Hint = "Телефонен номер";
             this.phoneClient.LeadingIcon = null;
-            this.phoneClient.Location = new System.Drawing.Point(27, 82);
+            this.phoneClient.Location = new System.Drawing.Point(281, 26);
             this.phoneClient.MaxLength = 50;
             this.phoneClient.MouseState = MaterialSkin.MouseState.OUT;
             this.phoneClient.Multiline = false;
@@ -236,6 +766,7 @@
             // 
             // nameClient
             // 
+            this.nameClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nameClient.AnimateReadOnly = false;
             this.nameClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameClient.Depth = 0;
@@ -252,6 +783,36 @@
             this.nameClient.Text = "";
             this.nameClient.TrailingIcon = null;
             // 
+            // guna2DateTimePicker2
+            // 
+            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
+            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.SteelBlue;
+            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(718, 52);
+            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
+            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(200, 36);
+            this.guna2DateTimePicker2.TabIndex = 31;
+            this.guna2DateTimePicker2.Value = new System.DateTime(2022, 9, 21, 11, 34, 17, 337);
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.SteelBlue;
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(512, 52);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
+            this.guna2DateTimePicker1.TabIndex = 30;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2022, 9, 21, 11, 34, 7, 765);
+            // 
             // resetBtn
             // 
             this.resetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -261,7 +822,7 @@
             this.resetBtn.Depth = 0;
             this.resetBtn.HighEmphasis = true;
             this.resetBtn.Icon = null;
-            this.resetBtn.Location = new System.Drawing.Point(616, 403);
+            this.resetBtn.Location = new System.Drawing.Point(719, 403);
             this.resetBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.resetBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.resetBtn.Name = "resetBtn";
@@ -283,7 +844,7 @@
             this.searchBtn.Depth = 0;
             this.searchBtn.HighEmphasis = true;
             this.searchBtn.Icon = null;
-            this.searchBtn.Location = new System.Drawing.Point(450, 403);
+            this.searchBtn.Location = new System.Drawing.Point(553, 403);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.searchBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.searchBtn.Name = "searchBtn";
@@ -299,46 +860,30 @@
             // materialLabel2
             // 
             this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel2.Location = new System.Drawing.Point(614, 30);
+            this.materialLabel2.Location = new System.Drawing.Point(718, 21);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(62, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(200, 28);
             this.materialLabel2.TabIndex = 21;
             this.materialLabel2.Text = "До дата";
+            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialLabel1
             // 
             this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.ForeColor = System.Drawing.Color.Black;
-            this.materialLabel1.Location = new System.Drawing.Point(408, 30);
+            this.materialLabel1.Location = new System.Drawing.Point(512, 21);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(200, 28);
             this.materialLabel1.TabIndex = 20;
             this.materialLabel1.Text = "От дата";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker2.Location = new System.Drawing.Point(617, 52);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 18;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(411, 52);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // emailBox
             // 
@@ -400,7 +945,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage2.Size = new System.Drawing.Size(1430, 460);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "WMS";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -410,7 +955,7 @@
             this.DMS.ImageKey = "shipped_32px.png";
             this.DMS.Location = new System.Drawing.Point(4, 39);
             this.DMS.Name = "DMS";
-            this.DMS.Size = new System.Drawing.Size(1225, 460);
+            this.DMS.Size = new System.Drawing.Size(1430, 460);
             this.DMS.TabIndex = 2;
             this.DMS.Text = "DMS";
             this.DMS.UseVisualStyleBackColor = true;
@@ -420,7 +965,7 @@
             this.tabPage4.ImageKey = "return_merchandise_authorization_32px.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 39);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage4.Size = new System.Drawing.Size(1430, 460);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "RTR";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -430,50 +975,141 @@
             this.tabPage3.ImageKey = "data_transfer_32px.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage3.Size = new System.Drawing.Size(1430, 460);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "TRN";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.materialButton5);
+            this.tabPage6.Controls.Add(this.darkThemeSwitch);
+            this.tabPage6.Controls.Add(this.materialButton2);
             this.tabPage6.ImageKey = "settings_32px.png";
             this.tabPage6.Location = new System.Drawing.Point(4, 39);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1225, 460);
+            this.tabPage6.Size = new System.Drawing.Size(1430, 460);
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "Настройки";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // materialButton5
+            // 
+            this.materialButton5.AutoSize = false;
+            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton5.Depth = 0;
+            this.materialButton5.HighEmphasis = true;
+            this.materialButton5.Icon = null;
+            this.materialButton5.Location = new System.Drawing.Point(199, 29);
+            this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton5.Name = "materialButton5";
+            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton5.Size = new System.Drawing.Size(168, 36);
+            this.materialButton5.TabIndex = 28;
+            this.materialButton5.Text = "Сменя на език";
+            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton5.UseAccentColor = false;
+            this.materialButton5.UseVisualStyleBackColor = true;
+            // 
+            // darkThemeSwitch
+            // 
+            this.darkThemeSwitch.AutoSize = true;
+            this.darkThemeSwitch.Depth = 0;
+            this.darkThemeSwitch.Location = new System.Drawing.Point(23, 83);
+            this.darkThemeSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.darkThemeSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.darkThemeSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.darkThemeSwitch.Name = "darkThemeSwitch";
+            this.darkThemeSwitch.Ripple = true;
+            this.darkThemeSwitch.Size = new System.Drawing.Size(149, 37);
+            this.darkThemeSwitch.TabIndex = 27;
+            this.darkThemeSwitch.Text = "Тъмна тема";
+            this.darkThemeSwitch.UseVisualStyleBackColor = true;
+            this.darkThemeSwitch.CheckedChanged += new System.EventHandler(this.darkThemeSwitch_CheckedChanged);
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSize = false;
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(23, 29);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(168, 36);
+            this.materialButton2.TabIndex = 26;
+            this.materialButton2.Text = "Смяна на парола";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
+            // 
             // userLoged
             // 
+            this.userLoged.Controls.Add(this.materialButton4);
+            this.userLoged.Controls.Add(this.materialButton3);
             this.userLoged.ImageKey = "logout_32px.png";
             this.userLoged.Location = new System.Drawing.Point(4, 39);
             this.userLoged.Name = "userLoged";
-            this.userLoged.Size = new System.Drawing.Size(1225, 460);
+            this.userLoged.Size = new System.Drawing.Size(1430, 460);
             this.userLoged.TabIndex = 7;
             this.userLoged.Text = "Изход";
             this.userLoged.UseVisualStyleBackColor = true;
             this.userLoged.Click += new System.EventHandler(this.userLoged_Click);
             // 
-            // imageList1
+            // materialButton4
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "return_merchandise_authorization_32px.png");
-            this.imageList1.Images.SetKeyName(1, "data_transfer_32px.png");
-            this.imageList1.Images.SetKeyName(2, "shipped_32px.png");
-            this.imageList1.Images.SetKeyName(3, "warehouse_32px.png");
-            this.imageList1.Images.SetKeyName(4, "settings_32px.png");
-            this.imageList1.Images.SetKeyName(5, "search_32px.png");
-            this.imageList1.Images.SetKeyName(6, "combo_chart_32px.png");
-            this.imageList1.Images.SetKeyName(7, "logout_32px.png");
+            this.materialButton4.AutoSize = false;
+            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton4.Depth = 0;
+            this.materialButton4.HighEmphasis = true;
+            this.materialButton4.Icon = null;
+            this.materialButton4.Location = new System.Drawing.Point(176, 26);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton4.Size = new System.Drawing.Size(141, 36);
+            this.materialButton4.TabIndex = 28;
+            this.materialButton4.Text = "Затваряне";
+            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton4.UseAccentColor = false;
+            this.materialButton4.UseVisualStyleBackColor = true;
+            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSize = false;
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(27, 26);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.Size = new System.Drawing.Size(141, 36);
+            this.materialButton3.TabIndex = 27;
+            this.materialButton3.Text = "Изход";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
             // DashboardTechnicians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 594);
+            this.ClientSize = new System.Drawing.Size(1441, 594);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
@@ -484,10 +1120,20 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardTechnicians_Load);
             this.materialTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.advancedSearchPanel.ResumeLayout(false);
-            this.advancedSearchPanel.PerformLayout();
             this.searchResult.ResumeLayout(false);
+            this.cancelOrderPanel.ResumeLayout(false);
+            this.cancelOrderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.userLoged.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -507,19 +1153,50 @@
         private System.Windows.Forms.Panel advancedSearchPanel;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MaterialSkin.Controls.MaterialTextBox emailBox;
         private MaterialSkin.Controls.MaterialTextBox orderIDBox;
         private MaterialSkin.Controls.MaterialTextBox phoneBox;
         private MaterialSkin.Controls.MaterialButton resetBtn;
         private MaterialSkin.Controls.MaterialButton searchBtn;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialSwitch darkThemeSwitch;
+        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialButton materialButton5;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
+        private MaterialSkin.Controls.MaterialLabel numOrders;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialLabel customersNum;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.Panel searchResult;
+        private MaterialSkin.Controls.MaterialButton changePayMethod;
+        private MaterialSkin.Controls.MaterialButton cancelOrder;
+        private MaterialSkin.Controls.MaterialButton standardGuarantee;
+        private MaterialSkin.Controls.MaterialButton createRMA;
+        private MaterialSkin.Controls.MaterialTextBox ShipmentDate;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private MaterialSkin.Controls.MaterialTextBox OrderStatus;
+        private MaterialSkin.Controls.MaterialTextBox OrderDate;
+        private MaterialSkin.Controls.MaterialTextBox orderNumber;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialTextBox countryClient;
         private MaterialSkin.Controls.MaterialTextBox cityClient;
         private MaterialSkin.Controls.MaterialTextBox addressClient;
         private MaterialSkin.Controls.MaterialTextBox phoneClient;
         private MaterialSkin.Controls.MaterialTextBox nameClient;
+        private System.Windows.Forms.Panel cancelOrderPanel;
+        private MaterialSkin.Controls.MaterialButton saveStatus;
+        private MaterialSkin.Controls.MaterialButton closeBtn;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialTextBox orderNumberCancel;
     }
 }

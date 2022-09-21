@@ -23,20 +23,9 @@ namespace eMAG
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = FillSettingsFile.UIColorScheme;
         }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Do you really want to quit?", "Quit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            
-        }
-
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-
+            FillSettingsFile.ReadFile();
         }
 
         private void signinBtn_Click(object sender, EventArgs e)
@@ -56,6 +45,8 @@ namespace eMAG
                     LogData.MiddleName = dr["middleName"].ToString();
                     LogData.LastName = dr["lastName"].ToString();
                     LogData.Position = dr["position"].ToString();
+                    LogData.Username = dr["username"].ToString();
+                    LogData.Password = dr["password"].ToString();
 
                     DashboardTechnicians dash1 = new DashboardTechnicians();
                     this.Hide();
@@ -74,9 +65,6 @@ namespace eMAG
             passBox.Clear();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            FillSettingsFile.ReadFile();
-        }
+        
     }
 }

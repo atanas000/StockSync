@@ -60,5 +60,7 @@ namespace eMAG
         public static string LastName;
 
         public static string Position;
+        public static string Username;
+        public static string Password;
     }
 }
