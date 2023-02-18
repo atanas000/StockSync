@@ -26,5 +26,5 @@ Currently in development. Only beta versions available!
 <h2>4. Installation</h2>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v0.1.1-beta>v0.1.1</a></p>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v0.1.2-beta>v0.1.2</a></p>
-<p><a href=https://github.com/atanas000/Envire/releases/tag/v0.1.3-beta>v0.1.3</a></p>
+<p><a href=https://github.com/atanas000/Envire/releases/tag/v.0.1.3-beta>v0.1.3</a></p>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v.0.1.4-beta>v0.1.4</a></p>
