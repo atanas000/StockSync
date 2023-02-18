@@ -41,6 +41,34 @@ namespace Envire
         private void DashboardTechnicians_Load(object sender, EventArgs e)
         {
 
+            usernameBox.Text = LogData.Username;
+            email.Text = LogData.Email;
+
+            //Delivery Tab
+            bunifuDataGridView3.AutoGenerateColumns = false;
+            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            {
+                conn.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT products.product_name, products.product_price, products.product_quantity, products.product_quantity*products.product_price AS sum FROM products", conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView3.DataSource = dt;
+
+
+            }
+            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT products.product_name FROM products", conn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    item.Items.Add(dr["product_name"].ToString());
+                }
+            }
+            //End of Delivery Tab
+
             bunifuDataGridView1.AutoGenerateColumns = false;
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
@@ -195,12 +223,6 @@ namespace Envire
                 da.Fill(dt);
                 bunifuDataGridView2.DataSource = dt;
             }
-        }
-
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-            ChangePassword c = new ChangePassword();
-            c.Show();
         }
 
         private void materialButton3_Click(object sender, EventArgs e)
@@ -603,6 +625,80 @@ namespace Envire
                     double TotalWithVaucher = double.Parse(totalWithVAT.Text) - (0.1 * double.Parse(totalWithVAT.Text));
                     totalWithVAT.Text = TotalWithVaucher.ToString();
                 }
+            }
+        }
+
+        private void materialExpansionPanel2_SaveClick(object sender, EventArgs e)
+        {
+            if (currPassBox.Text == LogData.Password)
+            {
+                if (newPassBox.Text == confPassBox.Text)
+                {
+                    using (MySqlConnection conn = new MySqlConnection(Data.conn))
+                    {
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand("UPDATE customers SET password=@pass WHERE username=@user", conn);
+                        cmd.Parameters.AddWithValue("@pass", newPassBox.Text);
+                        cmd.Parameters.AddWithValue("@user", usernameBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Паролата е сменена успешно!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                    mail.From = new MailAddress("envirestores@gmail.com");
+                    mail.To.Add(email.Text);
+                    mail.Subject = "Password change confirmation";
+                    mail.Body = $"Dear {LogData.FirstName},\r\n\r\nThis is a confirmation that the password for your account has been successfully changed.\r\n\r\nWe have received a request to change the password for the account associated with this email address. If you made this request, then you can disregard this message as it was completed successfully.\r\n\r\nHowever, if you did not initiate this password change, we advise you to immediately reset your password and contact our support team for further assistance.\r\n\r\nPlease do not reply to this message as it was sent from an unmonitored email address.\r\n\r\nBest regards,\r\nEnvire WMS Support Team.";
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new NetworkCredential("envirestores@gmail.com", "toxomvkuxvdcpegm");
+                    SmtpServer.EnableSsl = true;
+
+                    SmtpServer.Send(mail);
+
+                    materialExpansionPanel2.Collapse = true;
+                    currPassBox.Clear();
+                    newPassBox.Clear();
+                    confPassBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Паролите не съвпадат!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Грешна парола!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void addReceive_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE products SET product_quantity=product_quantity+@quantity WHERE product_id=@id", conn);
+                cmd.Parameters.AddWithValue("@id", item.SelectedIndex + 1);
+                cmd.Parameters.AddWithValue("@quantity", quantity.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Стоката е добавена успешно!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                item.SelectedIndex = -1;
+                quantity.Clear();
+                priceRec.Clear();
+            }
+            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            {
+                conn.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT products.product_name, products.product_price, products.product_quantity, products.product_quantity*products.product_price AS sum FROM products", conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView3.DataSource = dt;
+
+
             }
         }
     }

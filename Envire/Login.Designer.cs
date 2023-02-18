@@ -87,6 +87,7 @@
             this.passBox.Size = new System.Drawing.Size(227, 48);
             this.passBox.TabIndex = 17;
             this.passBox.TabStop = false;
+            this.passBox.Text = "admin";
             this.passBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.passBox.TrailingIcon = global::Envire.Properties.Resources.password_32px3;
             this.passBox.UseSystemPasswordChar = true;
@@ -119,6 +120,7 @@
             this.userBox.Size = new System.Drawing.Size(227, 48);
             this.userBox.TabIndex = 16;
             this.userBox.TabStop = false;
+            this.userBox.Text = "admin";
             this.userBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.userBox.TrailingIcon = global::Envire.Properties.Resources.user_32px;
             this.userBox.UseSystemPasswordChar = false;

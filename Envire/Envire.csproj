@@ -17,7 +17,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\nasko\Downloads\</PublishUrl>
+    <PublishUrl>C:\Users\nasko\Desktop\WebSite\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>0.0.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -322,12 +322,6 @@
     <Compile Include="CancelOrder.Designer.cs">
       <DependentUpon>CancelOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="EditProduct.cs">
       <SubType>Form</SubType>
@@ -390,9 +384,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CancelOrder.resx">
       <DependentUpon>CancelOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>
@@ -515,6 +506,7 @@
     <Content Include="insta_Original.ico" />
     <None Include="Resources\insta_Original.PNG" />
     <None Include="Resources\1.png" />
+    <None Include="Resources\add_24px1.png" />
     <Content Include="Settings.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
