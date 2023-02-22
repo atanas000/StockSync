@@ -21,9 +21,10 @@ namespace Envire
         public Login()
         {
             InitializeComponent();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = FillSettingsFile.UIColorScheme;
         }
         private void Login_Load(object sender, EventArgs e)
@@ -45,32 +46,35 @@ namespace Envire
 
         private void signinBtn_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            if (materialComboBox1.SelectedIndex == 0)
             {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM customers WHERE username=@user AND password=@pass", conn);
-                cmd.Parameters.AddWithValue("@user", userBox.Text);
-                cmd.Parameters.AddWithValue("@pass", passBox.Text);
-
-                MySqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                using (MySqlConnection conn = new MySqlConnection(Data.conn))
                 {
-                    LogData.FirstName = dr["first_name"].ToString();
-                    LogData.MiddleName = dr["middle_name"].ToString();
-                    LogData.LastName = dr["last_name"].ToString();
-                    LogData.Email = dr["email"].ToString();
-                    LogData.Position = dr["role"].ToString();
-                    LogData.Username = dr["username"].ToString();
-                    LogData.Password = dr["password"].ToString();
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM customers WHERE username=@user AND password=@pass", conn);
+                    cmd.Parameters.AddWithValue("@user", userBox.Text);
+                    cmd.Parameters.AddWithValue("@pass", passBox.Text);
 
-                    WMS dash1 = new WMS();
-                    this.Hide();
-                    dash1.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        LogData.FirstName = dr["first_name"].ToString();
+                        LogData.MiddleName = dr["middle_name"].ToString();
+                        LogData.LastName = dr["last_name"].ToString();
+                        LogData.Email = dr["email"].ToString();
+                        LogData.Position = dr["role"].ToString();
+                        LogData.Username = dr["username"].ToString();
+                        LogData.Password = dr["password"].ToString();
+
+                        WMS dash1 = new WMS();
+                        this.Hide();
+                        dash1.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

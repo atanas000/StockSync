@@ -100,7 +100,7 @@ namespace Envire
                 sw.WriteLine(FillSettingsFile.username);
                 sw.WriteLine(FillSettingsFile.password);
             }
-
+            //WMS Dashboard Statistics
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
                 conn.Open();
@@ -136,6 +136,19 @@ namespace Envire
                     totalSales.Text = dr[0].ToString() + " лв.";
                 }
             }
+
+            using (MySqlConnection conn = new MySqlConnection(Data.conn))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT SUM(product_quantity) FROM products ", conn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    warehouseStock.Text = dr[0].ToString();
+                }
+            }
+            //END WMS Dashboard Statistics
 
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
@@ -181,7 +194,7 @@ namespace Envire
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            bunifuDataGridView2.AutoGenerateColumns = false;
+            bunifuDataGridView4.AutoGenerateColumns = false;
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
                 conn.Open();
@@ -221,7 +234,7 @@ namespace Envire
 
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                bunifuDataGridView2.DataSource = dt;
+                bunifuDataGridView4.DataSource = dt;
             }
         }
 
@@ -301,14 +314,14 @@ namespace Envire
 
         private void editUser_Click(object sender, EventArgs e)
         {
-            TempData.UserEditID = usersDataGridView.CurrentRow.Cells["id"].Value.ToString();
+            TempData.UserEditID = bunifuDataGridView1.CurrentRow.Cells["id_col"].Value.ToString();
             EditUser d = new EditUser();
             d.Show();
         }
 
         private void delUser_Click(object sender, EventArgs e)
         {
-            string selected_id = usersDataGridView.CurrentRow.Cells["id"].Value.ToString();
+            string selected_id = usersDataGridView.CurrentRow.Cells["id_col"].Value.ToString();
 
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
@@ -325,13 +338,13 @@ namespace Envire
             if (e.ColumnIndex == 6)
             {
                 DataGridViewRow row = bunifuDataGridView1.Rows[e.RowIndex];
-                if (MessageBox.Show(String.Format("Наистина ли искате да изтриете записа?", row.Cells["Column2"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(String.Format("Наистина ли искате да изтриете записа?", row.Cells["id_col"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (MySqlConnection conn = new MySqlConnection(Data.conn))
                     {
                         conn.Open();
                         MySqlCommand cmd = new MySqlCommand("DELETE FROM products WHERE product_id=@id", conn);
-                        cmd.Parameters.AddWithValue("@id", row.Cells["Column2"].Value);
+                        cmd.Parameters.AddWithValue("@id", row.Cells["id_col"].Value);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -432,11 +445,11 @@ namespace Envire
             addtocart.Visible = true;
         }
 
-        private void cart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void bunifuDataGridView5_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             foreach (DataGridViewRow row in cart.Rows)
             {
-                row.Cells["Total"].Value = Convert.ToDouble(row.Cells["dataGridViewTextBoxColumn2"].Value) * Convert.ToDouble(row.Cells["product_price"].Value);
+                row.Cells["Total"].Value = Convert.ToDouble(row.Cells["item_quantity"].Value) * Convert.ToDouble(row.Cells["product_price"].Value);
             }
 
             double total = cart.Rows.Cast<DataGridViewRow>()
@@ -464,7 +477,7 @@ namespace Envire
                         int iNewRowIndex = cart.Rows.Add();
                         cart.Rows[iNewRowIndex].Cells["product_id"].Value = dr["product_id"].ToString();
                         cart.Rows[iNewRowIndex].Cells["product_name"].Value = dr["product_name"].ToString();
-                        cart.Rows[iNewRowIndex].Cells["dataGridViewTextBoxColumn2"].Value = 1;
+                        cart.Rows[iNewRowIndex].Cells["item_quantity"].Value = 1;
                         cart.Rows[iNewRowIndex].Cells["product_price"].Value = dr["product_price"].ToString();
                         //cart.Rows[iNewRowIndex].Cells["wholesalePrice"].Value = Convert.ToDouble(cart.Rows[iNewRowIndex].Cells["retailPrice"].Value) - (0.2 * Convert.ToDouble(cart.Rows[iNewRowIndex].Cells["retailPrice"].Value));
                     }
@@ -552,12 +565,12 @@ namespace Envire
             using (MySqlConnection conn = new MySqlConnection(Data.conn))
             {
                 conn.Open();
-                for (int i = 0; i < cart.Rows.Count - 1; i++)
+                for (int i = 0; i < cart.Rows.Count; i++)
                 {
                     MySqlCommand cmd = new MySqlCommand("INSERT INTO order_items (order_id, product_id, item_quantity, item_price) VALUES (@OrderID, @ProductID, @Quantity, @Total)", conn);
                     cmd.Parameters.AddWithValue("@OrderID", OrderID);
                     cmd.Parameters.AddWithValue("@ProductID", cart.Rows[i].Cells["product_id"].Value);
-                    cmd.Parameters.AddWithValue("@Quantity", cart.Rows[i].Cells["dataGridViewTextBoxColumn2"].Value);
+                    cmd.Parameters.AddWithValue("@Quantity", cart.Rows[i].Cells["item_quantity"].Value);
                     cmd.Parameters.AddWithValue("@Total", cart.Rows[i].Cells["Total"].Value);
                     cmd.ExecuteNonQuery();
                 }
@@ -601,7 +614,7 @@ namespace Envire
                 mail.From = new MailAddress("envirestores@gmail.com");
                 mail.To.Add(customer_email);
                 mail.Subject = "Order Registration Confirmation";
-                mail.Body = $"Dear {customer_name},\r\n\r\nWe are writing to confirm the successful registration of your order. We would like to thank you for choosing Envire Stores for your purchase. Your order has been received and is now being processed.\r\n\r\nHere are the details of your order:\r\n\r\nOrder Number: {OrderID}\r\nOrder Date: {order_date}\r\nOrder Total: {totalWithVAT.Text}\r\n\r\nPlease note that you will receive an email with the shipping information once your order has been dispatched. You can also track your order by logging into your account on our website.\r\n\r\nIf you have any questions or concerns about your order, please feel free to contact us. We are always happy to help.\r\n\r\nThank you for your business.\r\n\r\nSincerely,\r\n\r\nAtanas Iliev\r\nEnvire WMS";
+                mail.Body = $"Dear {customer_name},\r\n\r\nWe are writing to confirm the successful registration of your order. We would like to thank you for choosing Envire Stores for your purchase. Your order has been received and is now being processed.\r\n\r\nHere are the details of your order:\r\n\r\nOrder Number: {OrderID}\r\nOrder Date: {order_date}\r\nOrder Total: {totalWithVAT.Text}$\r\n\r\nPlease note that you will receive an email with the shipping information once your order has been dispatched. You can also track your order by logging into your account on our website.\r\n\r\nIf you have any questions or concerns about your order, please feel free to contact us. We are always happy to help.\r\n\r\nThank you for your business.\r\n\r\nSincerely,\r\n\r\nAtanas Iliev\r\nEnvire WMS";
 
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new NetworkCredential("envirestores@gmail.com", "toxomvkuxvdcpegm");
@@ -701,5 +714,7 @@ namespace Envire
 
             }
         }
+
+        
     }
 }

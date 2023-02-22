@@ -73,6 +73,16 @@ namespace Envire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1656831886_47_illustration_png {
+            get {
+                object obj = ResourceManager.GetObject("1656831886_47-illustration_png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _352021_arrow_drop_down_icon {
             get {
                 object obj = ResourceManager.GetObject("352021_arrow_drop down_icon", resourceCulture);
@@ -293,6 +303,16 @@ namespace Envire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap google_24px {
+            get {
+                object obj = ResourceManager.GetObject("google_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_address_32px {
             get {
                 object obj = ResourceManager.GetObject("home_address_32px", resourceCulture);
@@ -343,9 +363,29 @@ namespace Envire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap microsoft_24px {
+            get {
+                object obj = ResourceManager.GetObject("microsoft_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mobile_shop_payment_24px {
             get {
                 object obj = ResourceManager.GetObject("mobile_shop_payment_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_product_24px {
+            get {
+                object obj = ResourceManager.GetObject("new_product_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

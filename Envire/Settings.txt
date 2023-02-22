@@ -3,5 +3,5 @@
 Envire
 pi
 raspberry
-Dark
+Light
 Bulgarian
