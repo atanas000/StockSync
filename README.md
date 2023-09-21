@@ -5,7 +5,7 @@
 </p>
 
 <h2>1. Introduction</h2>
-
+<p>NEW MAJOR UPDATE IS IN DEVELOPMENT WITH NEW MODERN DESIGN. COMMING SOON!</p>
 <p>Envire by VivaSoft is a warehouse management system software. It helps small and medium-sized companies with inventory management and the organisation of sales.</p>
 <p>Built on C# and SQL</p>
 <p>Currently in development. Only beta versions available!</p>
