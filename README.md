@@ -1,7 +1,7 @@
 <h1 align="center">StockSync by VivaSoft</h1>
 
 <p align="center">
-  <img width="857" height="207" src="https://user-images.githubusercontent.com/68632595/191574354-39fd78ed-c77b-41b7-96b1-427726598ab3.png">
+  <img width="300" height="300" src="https://github.com/atanas000/Envire-Private/blob/9542d49720ea5586eec15bf70c5ebec4f055c2d8/StockSync-logos.jpeg?raw=true">
 </p>
 
 <h2>1. Introduction</h2>
