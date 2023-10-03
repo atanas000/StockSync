@@ -1,0 +1,86 @@
+CREATE DATABASE StockSync;
+USE StockSync;
+create table categories
+(
+    category_id   int auto_increment
+        primary key,
+    category_name varchar(50) not null
+);
+
+create table customers
+(
+    customer_id      int auto_increment
+        primary key,
+    first_name       varchar(100) not null,
+    middle_name      varchar(100) null,
+    last_name        varchar(100) not null,
+    address          varchar(100) not null,
+    city             varchar(50)  not null,
+    country          varchar(100) not null,
+    post_code        varchar(10)  not null,
+    phone            varchar(50)  not null,
+    email            varchar(50)  not null,
+    role             varchar(10)  not null,
+    username         varchar(100) not null,
+    password         varchar(100) not null,
+    promo_code       varchar(50)  null,
+    discount_percent double       null
+);
+
+create table locations
+(
+    location_id int auto_increment
+        primary key,
+    location    varchar(50) null
+);
+
+create table orders
+(
+    order_id     int auto_increment
+        primary key,
+    customer_id  int          not null,
+    order_date   datetime     not null,
+    order_status varchar(50)  not null,
+    order_total  varchar(100) null,
+    constraint orders_customers_id_fk
+        foreign key (customer_id) references customers (customer_id)
+);
+
+create table products
+(
+    product_id       int auto_increment
+        primary key,
+    product_name     varchar(100) not null,
+    product_type     varchar(50)  null,
+    product_brand    varchar(50)  null,
+    product_model    varchar(50)  null,
+    product_price    double       not null,
+    product_quantity int          not null,
+    product_sku      varchar(50)  null,
+    product_barcode  varchar(50)  not null,
+    product_location varchar(30)  null
+);
+
+create table order_items
+(
+    order_id      int    not null,
+    product_id    int    not null,
+    item_quantity int    null,
+    item_price    double null,
+    constraint order_items_orders_order_id_fk
+        foreign key (order_id) references orders (order_id),
+    constraint order_items_products_product_id_fk
+        foreign key (product_id) references products (product_id)
+);
+
+create table tasks
+(
+    task_id         int auto_increment
+        primary key,
+    task_type       varchar(50)  not null,
+    task_name       varchar(100) not null,
+    task_dateCreate datetime     not null,
+    task_dateDue    datetime     not null,
+    task_desc       varchar(500) not null,
+    task_status     varchar(50)  not null
+);
