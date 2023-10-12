@@ -22,15 +22,15 @@
 <p>В момента се разработва. Достъпна е само бета версия!</p>
 
 <h2>4. Инсталиране</h2>
+- Свържете се с мен за демо версия
 <!--
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v0.1.1-beta>v0.1.1-beta</a></p>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v0.1.2-beta>v0.1.2-beta</a></p>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v.0.1.3-beta>v0.1.3-beta</a></p>
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v.0.1.4-beta>v0.1.4-beta</a></p>
--->
 <p><a href=https://github.com/atanas000/Envire/releases/tag/v.1.0.0>v1.0.0-official</a></p>
-
 <p><a href=https://github.com/atanas000/StockSync/blob/b066462b3f92387dda76f17cf70956372bb1f094/SQL%20Script.txt>MySQL Database Script</a></p>
+-->
 <h2>5. Снимки</h2>
 <img src="https://github.com/atanas000/StockSync/blob/ec7558fefa61cb330cab86774ad1b6f0e96e9556/Login.png">
 <img src="https://github.com/atanas000/StockSync/blob/ec7558fefa61cb330cab86774ad1b6f0e96e9556/Dashboard.png">
