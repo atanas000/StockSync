@@ -12,8 +12,6 @@ Welcome to StockSync, a powerful tool designed to streamline your stock manageme
   - [Web](#web)
 - [License](#license)
 - [Contact](#contact)
-- [StockSync for Windows](#Windows)
-- [StockSync for Web](#Web)
 
 ## About StockSync
 
@@ -41,12 +39,4 @@ StockSync is licensed under the MIT License. See the LICENSE file for more detai
 
 ## Contact
 
-For questions or feedback, please reach out to us at info@svivasoft.tech.
-
-## StockSync for Windows
-
-StockSync-Windows Repository
-
-## StockSync for Web
-
-StockSync-Web Repository
+For questions or feedback, please reach out to us at info@vivasoft.tech.
