@@ -2,7 +2,7 @@
 
 Welcome to StockSync, a powerful tool designed to streamline your stock management process. StockSync is available for both Windows and Web browsers, providing flexibility and convenience for managing your inventory efficiently.
 
-![StockSync Logo](path/to/logo.png)
+![StockSync Logo](https://github.com/atanas000/StockSync/blob/c934f71e7666a6bf6b769dc18d2c6a7250a53461/logo2.png)
 
 ## Table of Contents
 - [About StockSync](#about-stocksync)
